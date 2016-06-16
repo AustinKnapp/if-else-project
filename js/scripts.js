@@ -4,6 +4,8 @@ $(document).ready(function() {
     event.preventDefault();
     $("#intro").hide();
 
+    var age = parseInt($("#age").val());
+    alert(age);
     $("#over18").show();
 
   });
