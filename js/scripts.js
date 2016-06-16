@@ -1,5 +1,4 @@
 $(document).ready(function() {
-
   $("#intro form").submit(function(event) {
     event.preventDefault();
 
@@ -10,11 +9,12 @@ $(document).ready(function() {
     var age = parseInt($("#age").val());
 
     // Verify age
-    if (age >= 18) {
+    if (age > 18) {
       $("#over18").show();
+    } else if (age === 18) {
+      $("#info").show();
     } else {
       $("#under18").show();
     }
-
   });
 });
